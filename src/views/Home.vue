@@ -1,44 +1,48 @@
 <template>
-  <div class="d-flex flex-column  align-items-center">
-    <div class="col-2">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo github" class="img-fluid">
-    </div>
-    <h1 class="m-4">Bienvenue sur mon Portfolio GitHub</h1>
-    <p class="h1">Yvan Brai.</p>
-    <div class="container m-4 text-center">
-      <p>Etudiant à l'école #Webstart, en developpement web et application mobile depuis 2019.</p>
-      <p>Voici le Portfolio de mes projet GitHub, réaliser en Vue JS3, Vue Router, Vue X, et Apollov4 / Graph-QL</p>
-      <img src="https://www.cidj.com/sites/default/files/styles/full_offre/public/2020-01/LOGO-e%CC%81cole-webstart.png?itok=YhMS1Kl2" alt="logo  webstart">
-    </div>
-    <div class="container m-4 text-center">
-      <p>Apollo: {{req}}</p>
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <p>{{viewer.login}}</p>
+
+    <div class="card-style" v-for="repo in viewer.repositories.nodes" :key="repo.id">
+      <p>{{repo.name}}</p>
     </div>
   </div>
 </template>
 
 <script>
+// @ is an alias to /src
 import gql from 'graphql-tag'
 
 export default {
+  name: 'Home',
+
   apollo: {
-    req: gql`
-      query {
-        viewer {
-          name
-          repositories(last: 10) {
-            nodes {
-              name
-            }
+    viewer: gql`query { 
+      viewer { 
+        login
+        repositories(first: 10) {
+          nodes{
+            id
+            name
           }
         }
       }
-    `,
-  },
-  
-  name: 'HomeComponent',
+    }`
+  }
 }
+
 </script>
 
 <style scoped>
+
+.card-style{
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid rgb(139, 139, 139);
+  -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.55); 
+  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.55);
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
 
 </style>
