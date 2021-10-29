@@ -17,6 +17,7 @@
     "axios": "^0.22.0",
     "bootstrap": "^5.0.0-beta3",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
     "graphql": "^16.0.0",
     "graphql-tag": "^2.12.5",
     "vue": "^3.0.0",
