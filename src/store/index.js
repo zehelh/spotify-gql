@@ -1,6 +1,4 @@
 import { createStore } from 'vuex'
-import gitList from './gitList'
-import gitQl from './gitQl'
 
 export default createStore({
   state: {
@@ -10,7 +8,5 @@ export default createStore({
   actions: {
   },
   modules: {
-    gitList,
-    gitQl
   }
 })

@@ -16,18 +16,17 @@ import gql from 'graphql-tag'
 
 export default {
   apollo: {
-    req: gql`
-      query {
-        viewer {
-          name
-          repositories(last: 10) {
-            nodes {
-              name
-            }
+    viewer: gql`query { 
+      viewer { 
+        login
+        repositories(first: 10) {
+          nodes{
+            id
+            name
           }
         }
       }
-    `,
+    }`
   },
   
   name: 'HomeComponent',
