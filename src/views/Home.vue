@@ -11,6 +11,7 @@
 </template> 
 
 <script>
+
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import gql from 'graphql-tag'
@@ -33,11 +34,11 @@ export default {
         }
       }
     }`,
-
     
   },
 }
 </script>
+
 <style scoped>
 
 .card-style{
