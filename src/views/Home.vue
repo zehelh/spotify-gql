@@ -3,15 +3,10 @@
     <div class="col-2">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo github" class="img-fluid">
     </div>
-    <h1 class="m-4">Bienvenue sur mon Portfolio GitHub</h1>
-    <p class="h1">Yvan Brai.</p>
+    <h1 class="m-4">Spotify Stats GQL</h1>
+    <p class="h1">Spotify Stats GQL</p>
     <div class="container m-4 text-center">
-      <p>Etudiant à l'école #Webstart, en developpement web et application mobile depuis 2019.</p>
-      <p>Voici le Portfolio de mes projet GitHub, réaliser en Vue JS3, Vue Router, Vue X, et Apollov4 / Graph-QL</p>
-      <img src="https://www.cidj.com/sites/default/files/styles/full_offre/public/2020-01/LOGO-e%CC%81cole-webstart.png?itok=YhMS1Kl2" alt="logo  webstart">
-    </div>
-    <div class="container m-4 text-center">
-      <p>Apollo: {{req}}</p>
+      <img src="http://assets.stickpng.com/images/59b5bb466dbe923c39853e00.png" alt="logo  webstart">
     </div>
   </div>
 </template>
