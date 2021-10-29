@@ -1,30 +1,30 @@
 <template>
-  <section id="container" class="d-flex flex-column align-items-center pb-5">
-    <div id="bg" class="bg-info bg-gradient"></div>
-    <div id="nav" class="my-5 fw-bold">
-      <router-link to="/" class="btn btn-secondary mx-2">Home</router-link>
-      <router-link to="/projects" class="btn btn-secondary mx-2">Mes projets</router-link>
-    </div>
-    <router-view/>
-  </section>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <router-view/>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700&display=swap');
 #app {
-  font-family: 'Raleway', Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #27D0F2;
-}
-
-#bg {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+  color: #42b983;
 }
 </style>
