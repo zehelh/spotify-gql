@@ -3,8 +3,7 @@ import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: 'https://api.github.com/graphql',
-  headers: { 'Authorization': `bearer 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` }
+  uri: 'https://api.spacex.land/graphql/',
 })
 
 

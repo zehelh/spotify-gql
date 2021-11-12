@@ -1,39 +1,52 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <p>{{viewer.login}}</p>
-
-    <div class="card-style" v-for="repo in viewer.repositories.nodes" :key="repo.id">
-      <p>{{repo.name}}</p>
-    </div>
+    <img src="http://assets.stickpng.com/images/5842a770a6515b1e0ad75afe.png" class="img-fluid" alt="">
+        <p>{{this.company}}</p>
+        <p>{{this.company.ceo}}</p>
+        <p>{{this.company.coo}}</p>
+        <p>{{this.company.cto}}</p>
+        <p>{{this.company.status}}</p>
+        
+  <el-row>
+    <el-button>Default</el-button>
+    <el-button type="primary">Primary</el-button>
+    <el-button type="success">Success</el-button>
+    <el-button type="info">Info</el-button>
+    <el-button type="warning">Warning</el-button>
+    <el-button type="danger">Danger</el-button>
+    <el-button>中文</el-button>
+  </el-row>
   </div>
-</template> 
+</template>
 
 <script>
-
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import gql from 'graphql-tag'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  },
 
   apollo: {
-    viewer: gql`query { 
-      viewer { 
-        login
-        repositories(first: 10) {
-          nodes{
-            id
-            name
-          }
-        }
+    company: gql`{
+      company {
+      ceo
+      coo
+      cto
+      employees
+      founded
+      founder
+      headquarters {
+        address
+        city
+        state
       }
-    }`,
+      launch_sites
+      name
+      summary
+      test_sites
+      vehicles
+    }
+    }
+    `,
     
   },
 }
