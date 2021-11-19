@@ -1,6 +1,14 @@
 {
-  "name": "learn-graphql",
+  "name": "spacex-graphql",
   "version": "0.1.0",
+  "description": "CLI that generates beautiful README.md files.",
+  "author": "Antho L, Maxence B, Yvan B",
+  "license": "MIT",
+  "homepage": "https://github.com/zehelh/spotify-gql",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zehelh/spotify-gql"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
