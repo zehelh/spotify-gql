@@ -44,6 +44,7 @@ const routes = [
     component: () => import('../views/Mission.vue'),
     props: true
   },
+]
 
 const router = createRouter({
     history: createWebHashHistory(),
