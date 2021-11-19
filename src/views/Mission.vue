@@ -1,5 +1,5 @@
 <template>
-  <div class="my-background col-12 d-flex align-items-center flex-column">
+  <div v-if="mission" class="my-background col-12 d-flex align-items-center flex-column">
     <div class="card col-10 mt-4">
       <p class="card-header">Informations sur la mission</p> 
       <p class="h1 mt-3 mb-3">Mission : {{mission.name}}</p>
@@ -27,7 +27,7 @@
 
     </div>
     <div class="col-10 mt-4 d-flex flex-wrap justify-content-center">
-      <div class="card col-5 m-2" v-for="payload in mission.payloads" :key="payload.id">
+      <div class="card col-5 m-2" v-for="(payload) in mission.payloads" :key="payload.id">
         <p class="card-header">Informations sur la cargaison : {{payload.id}}</p> 
         <p class="mb-1"><span class="fw-bold">Clients : </span>{{payload.customers}}</p>
         <p class="mb-1"><span class="fw-bold">Nationalité : </span>{{payload.nationality}}</p>

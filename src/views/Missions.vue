@@ -1,5 +1,5 @@
 <template>
-<div class="my-background">
+<div v-if="missions" class="my-background">
   <div class="col-12 d-flex justify-content-center">
     <div class="card col-10 mt-4">
       <div class="card-header">

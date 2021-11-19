@@ -4,7 +4,7 @@
             <h1 class="light m-3 text-white">Les Fusées de SpaceX</h1>
         </div>
         <div class="container d-flex flex-wrap justify-content-between">
-            <div class="card col-12 my-3" v-for="rocket in rockets" :key="rocket.id">
+            <div class="card col-12 col-lg-5 m-3" v-for="rocket in rockets" :key="rocket.id">
                 <div class="card-header">
                      <h5 class="card-title">{{rocket.name}}</h5>
                 </div>
