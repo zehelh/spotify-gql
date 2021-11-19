@@ -1,10 +1,8 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core'
 
 // HTTP connection to the API
-const httpLink = createHttpLink({
-    // You should use an absolute URL here
-    // uri: 'https://api.spotify.com/graphql',
-    uri: 'https://api.spacex.land/graphql/',
+const httpLink = createHttpLink({ 
+  uri: 'https://api.spacex.land/graphql/',
 })
 
 // Cache implementation
