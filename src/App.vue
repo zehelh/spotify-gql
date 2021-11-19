@@ -17,6 +17,15 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/capsules">Capsules</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/missions">Missions</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/dragons">Dragons</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/rockets">Rockets</router-link>
+          </li>
         </ul>
       </div>
     </div>
