@@ -1,8 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/capsules">Capsules</router-link>
-  </div>
+  <img src="https://www.spacex.com/static/images/crew-2/return/HP_Crew-2_Return_Website_01_Desktop.webp" alt="background" id="bg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand p-0" href="#"><img class="logo align-baseline"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/SpaceX-Logo.svg/1280px-SpaceX-Logo.svg.png"
+          alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/capsules">Capsules</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <router-view/>
 </template>
 
@@ -19,12 +37,26 @@
   padding: 30px;
 }
 
-#nav a {
+.nav-link {
+  color: #A7A9AC !important;
   font-weight: bold;
-  color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.router-link-exact-active {
+  color: #005288 !important;
 }
+
+.logo {
+  height: 20px;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+  z-index: -1;
+}
+
 </style>

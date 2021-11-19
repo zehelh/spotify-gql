@@ -1,21 +1,15 @@
 <template>
   <div class="home">
     <img src="http://assets.stickpng.com/images/5842a770a6515b1e0ad75afe.png" class="img-fluid" alt="">
-        <p>{{this.company}}</p>
-        <p>{{this.company.ceo}}</p>
-        <p>{{this.company.coo}}</p>
-        <p>{{this.company.cto}}</p>
-        <p>{{this.company.status}}</p>
-        
-  <el-row>
-    <el-button>Default</el-button>
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-button type="info">Info</el-button>
-    <el-button type="warning">Warning</el-button>
-    <el-button type="danger">Danger</el-button>
-    <el-button>中文</el-button>
-  </el-row>
+    <div class="text-white">
+      <p>{{this.company.summary}}</p>
+      <p>{{this.company.name}} was founded by {{this.company.founder}}, the actual CEO is {{this.company.ceo}} and the CTO is {{this.company.cto}}, the COO is {{this.company.coo}}.</p>
+      <p>{{this.company.name}} own {{this.company.launch_sites}} launch sites by now.</p>
+      <p>The {{this.company.name}} headquarter is located at {{this.company.headquarters.address}}, {{this.company.headquarters.city}} in  {{this.company.headquarters.state}}</p>
+      <div>
+        <img src="https://www.francetvinfo.fr/pictures/hu16sWh8xG71dHXuQnDRvR1yjTE/752x423/2021/11/09/phprfVrRg.jpg" alt="Thomas Pesquet" class="img-fluid mb-5">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -42,9 +36,7 @@ export default {
       launch_sites
       name
       summary
-      test_sites
-      vehicles
-    }
+      }
     }
     `,
     
@@ -64,5 +56,6 @@ export default {
   border-radius: 4px;
 
 }
+
 
 </style>
