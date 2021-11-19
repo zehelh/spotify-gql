@@ -1,7 +1,7 @@
 <template>
 <!-- On pose un vif pour eviter les erreur console generer avant la req -->
   <div v-if="capsule">
-    <h1 class="fw-bold m-3">Capsule {{capsule.id}}</h1>
+    <h1 class="fw-bold m-3 text-white">Capsule {{capsule.id}}</h1>
     <div class="d-flex flex-wrap justify-content-evenly">
         <div class="card col-10 m-2">
           <div class="card-header bg-opacity-50 mb-2" :class="{ 'bg-success' : capsule.status == 'active', 'bg-danger' : capsule.status == 'destroyed', 'bg-secondary' : capsule.status == 'retired', 'bg-warning' : capsule.status == 'unknown' }">

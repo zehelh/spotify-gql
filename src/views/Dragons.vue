@@ -1,10 +1,10 @@
 <template>
     <div class="dragons">
         <div class="container center">
-            <h1 class="light mb-5">Les navettes DRAGONS de SpaceX</h1>
+            <h1 class="light m-3 text-white">Les navettes DRAGONS de SpaceX</h1>
         </div>
         <div class="container d-flex flex-row-reverse flex-wrap-reverse justify-content-between">
-            <div class="card col-12 my-3" v-for="dragon in dragons" :key="dragon.id">
+            <div class="card col-12 col-lg-6 p-3" v-for="dragon in dragons" :key="dragon.id">
                 <div class="card-header">
                     <h5 class="card-title">{{dragon.name}}</h5>
                 </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="dragons">
         <div class="container center">
-            <h1 class="light mb-5">Les Fusées de SpaceX</h1>
+            <h1 class="light m-3 text-white">Les Fusées de SpaceX</h1>
         </div>
         <div class="container d-flex flex-wrap justify-content-between">
             <div class="card col-12 my-3" v-for="rocket in rockets" :key="rocket.id">
