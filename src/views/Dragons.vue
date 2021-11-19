@@ -7,16 +7,16 @@
         <div class="container d-flex flex-row-reverse flex-wrap-reverse justify-content-between">
             <div class="card" v-for="dragon in dragons" :key="dragon.id">
                 <div class="card-header">
-                    Active : {{dragon.active}}
+                    <h5 class="card-title">{{dragon.name}}</h5>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{dragon.name}}</h5>
                     <p class="card-text">{{dragon.description}}</p>
                     <a :href="`${dragon.wikipedia}`" class="btn btn-dark">Go to the wiki</a>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Nombre de palce(s) : {{dragon.crew_capacity}}</li>
-                    <li class="list-group-item">Diamètre (en mètre) : {{dragon.diameter.meters}}</li>
+                    <li class="list-group-item" :class="{'bg-success' : dragon.active == true, 'bg-danger' : dragon.active == false}">Active : {{dragon.active}}</li>
+                    <li class="list-group-item"><i class="bi bi-people-fill"></i> Nombre de palce(s) : {{dragon.crew_capacity}}</li>
+                    <li class="list-group-item"><i class="bi bi-aspect-ratio-fill"></i> Diamètre (en mètre) : {{dragon.diameter.meters}}</li>
                     <li class="list-group-item">Poids de la navette (en kg) : {{dragon.dry_mass_kg}}</li>
                 </ul>
             </div>
@@ -31,10 +31,6 @@ export default {
     name: 'Dragons',
     components: {
     },
-
-    data: () => ({
-      show: true
-    }),
 
     apollo: {
         dragons: gql`query { 
