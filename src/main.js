@@ -5,11 +5,8 @@ import store from './store'
 import ApolloClient from './apollo/index'
 import { createApolloProvider } from '@vue/apollo-option'
 
-
-// import ElementPlus from 'element-plus'
-// import 'element-plus/dist/index.css'
-
-
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const apolloProvider = createApolloProvider({
     defaultClient: ApolloClient,
