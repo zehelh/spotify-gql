@@ -4,7 +4,7 @@
             <h1 class="light mb-5">Les Fusées de SpaceX</h1>
         </div>
         <div class="container d-flex flex-wrap justify-content-between">
-            <div class="card" v-for="rocket in rockets" :key="rocket.id">
+            <div class="card col-12 my-3" v-for="rocket in rockets" :key="rocket.id">
                 <div class="card-header">
                      <h5 class="card-title">{{rocket.name}}</h5>
                 </div>
@@ -47,54 +47,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-
-.light {
-    color: white;
-}
-
-.navette {
-    width: 200px;
-    margin-bottom: 30px;
-}
-
-.dragons {
-    background-image: url('../assets/falconHeavy.jpg');
-    margin-top: -56px;
-    padding-top: 100px;
-    width: 100%;
-    height: 100vh !important;
-    background-size: cover;
-}
-
-.card {
-    opacity: 0.8;
-    width: 45%;
-    margin-bottom: 20px;
-}
-
-/* .card-body {
-    background-color: rgb(77, 77, 77);
-    color: white;
-} */
-
-.card-style{
-  width: 80%;
-  margin-left: 10%;
-  border: 1px solid rgb(139, 139, 139);
-  -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.55); 
-  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.55);
-  margin-bottom: 20px;
-  border-radius: 4px;
-
-}
-
-@media screen and (max-width: 768px){
-    .card {
-    width: 100%;
-    margin-bottom: 20px;
-}
-}
-
-</style>
